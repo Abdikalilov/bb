@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./CardFhdt.scss";
+import "./cardFhdt.scss";
 
 export const  CardFhdt = () => {
   const [mobile, setMObile] = useState(window.innerWidth < 460)

@@ -1,5 +1,5 @@
 import { CardBook } from "../../../features";
-import "./NewsBookUpdate.scss";
+import "./newsBookUpdate.scss";
 
 export const NewsBooksUpdate = () => {
   const cards = [

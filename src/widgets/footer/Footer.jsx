@@ -49,7 +49,7 @@ export const Footer = () => {
                 <FaGoogle color="#105B60" />
               </div>
             </div>
-          </div> 
+          </div>
           <div className="footer_sections">
             <div className="footer_section">
               <h3 onClick={toggleAbout} className="footer_section_title">
@@ -114,30 +114,35 @@ export const Footer = () => {
           <p>Политика конфидециональнности</p>
         </div>
         <div className="footer_bottom mobile">
-          <p>© 2025 Название библиотеки . Все права защищены.</p>
-          <a href="https://geeks.kg/geeks-pro">MADE BY GEEKSPRO</a>
-          <div className="footer_views">
-            <img src={Akar} alt="" className="footer_views_akar" />
-            <img src={Rectangle} alt="" />
-            <div>
-              <div className="img">
-                <div >
-                  <FaRegEye />
-                  <p>5930</p>
-                </div>
-                <div>
-                  <IoExit />
-                  <p>3369</p>
-                </div>
-                <div>
-                  <IoMdPeople />
-                  <p>2435</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>Политика конфидециональнности</p>
+  <div className="footer_views">
+    <img src={Akar} alt="" className="footer_views_akar" />
+    <img src={Rectangle} alt="" />
+    <div>
+      <div className="img">
+        <div>
+          <FaRegEye />
+          <p>5930</p>
         </div>
+        <div>
+          <IoExit />
+          <p>3369</p>
+        </div>
+        <div>
+          <IoMdPeople />
+          <p>2435</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className="footer_views_info">
+    <p>© 2025 Название библиотеки . Все права защищены.</p>
+    <p>Политика конфидециональнности</p>
+    <div className="footer_views_info_geeks">
+      <a href="https://geeks.kg/geeks-pro">MADE BY GEEKSPRO</a>
+    </div>
+  </div>
+</div>
+
       </div>
     </footer>
   );

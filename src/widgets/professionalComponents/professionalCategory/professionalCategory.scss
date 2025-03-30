@@ -1,0 +1,130 @@
+.professional-category-card {
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 1320px;
+  height: 148px;
+  background: #105B60;
+  border-radius: 10px;
+  border: 0.75px solid #105B60;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  .professional-category-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .professional-category-title {
+      font-family: 'Kino', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #FFFFFF;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .professional-category-text {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0%;
+      color: #FFFFFF;
+      margin: 0;
+    }
+  }
+
+  .professional-category-button {
+    width: 140px;
+    height: 40px;    
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 0.75px solid #FFFFFF;
+    background-color: #105B60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .button_text {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18.75px;
+      letter-spacing: 0%;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-category-card {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    align-items: flex-start;
+    gap: 15px;
+
+    .professional-category-content {
+      .professional-category-title {
+        font-size: 16px;
+      }
+
+      .professional-category-text {
+        font-size: 14px;
+      }
+    }
+
+    .professional-category-button {
+      width: 120px;
+      height: 36px;
+      // margin-top: 10px;
+      .button_text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-category-card {
+    padding: 10px;
+
+    .professional-category-content {
+      .professional-category-title {
+        font-size: 14px;
+      }
+
+      .professional-category-text {
+        font-size: 12px;
+      }
+    }
+
+    .professional-category-button {
+      width: 140px;
+      height: 40px;
+      
+      top: 88px;
+      left: 1160px;
+      border-radius: 30px;
+      border-width: 0.75px;
+      padding-top: 11.25px;
+      padding-right: 24px;
+      padding-bottom: 11.25px;
+      padding-left: 24px;
+      gap: 7.5px;
+
+
+      .button_text {
+        margin: 30px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

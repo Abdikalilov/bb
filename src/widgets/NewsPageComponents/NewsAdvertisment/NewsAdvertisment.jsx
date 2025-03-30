@@ -1,4 +1,4 @@
-import { CardAfisha } from "../../../features/";
+import { CardAfisha } from "../../../features";
 import "./newsAdvertisment.scss";
 export const NewsAdvertisment = ({title}) => {
 

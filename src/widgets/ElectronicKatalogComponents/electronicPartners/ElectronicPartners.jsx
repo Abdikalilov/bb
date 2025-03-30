@@ -1,4 +1,4 @@
-import './ElectronicPartners.scss';
+import './electronicPartners.scss';
 import Sponsors from '../../../shared/img/Sponsors.jpg';
 
 

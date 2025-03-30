@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
-import "./HomeViews.scss";
+import "./homeViews.scss";
 
 export function HomeViews({mobile}) {
  

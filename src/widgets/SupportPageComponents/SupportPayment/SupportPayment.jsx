@@ -1,4 +1,4 @@
-import './SupportPayment.scss';
+import './supportPayment.scss';
 import imageA from '../../../shared/img/imageA.png';
 import imageB from '../../../shared/img/imageB.png';
 import imageC from '../../../shared/img/imageC.png';

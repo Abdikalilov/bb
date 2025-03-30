@@ -1,6 +1,6 @@
 import Rectangle from '../../../shared/img/Rectanglel.jpg';
 import rectanglebanner from '../../../shared/img/rectanglebanner.png';
-import './SupportBanner.scss';
+import './supportBanner.scss';
 
 export const SupportBanner = () => {
   const supportData = [

@@ -1,5 +1,5 @@
 import  { useState, useEffect, useRef } from 'react';
-import './ElectronicSearch.scss';
+import './electronicSearch.scss';
 import { CardBook } from '../../../features';
 
 export const ElectronicSearch = () => {

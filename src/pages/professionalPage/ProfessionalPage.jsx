@@ -1,37 +1,39 @@
 import React, { useState } from 'react';
+import { ProfessionalCategory, ProfessionalBaner, ProfessionalSearch } from '../../widgets';
 import './professionalPage.scss';
-import { Bibliographical ,Methodological,Sidebar ,Multimedia } from '../../widgets';
-
 export const ProfessionalPage = () => {
-    const [selected, setSelected] = useState(1);
-    
-    const categories = [
-        {
-            id: 1,
-            title: 'БИБЛИОГРАФИЧЕСКИЕ ИЗДАНИЯ',
-        },
-        {
-            id: 2,
-            title: 'МЕТОДИЧЕСКИЕ ПОСОБИЯ',
-        },
-        {
-            id: 3,
-            title: 'МУЛЬТИМЕДИЙНЫЕ ПРОДУКТЫ',
-        },
-    ];
-
-    return (
-        <div className="container">
-        <div className="professional-container">
-            <div className="professional-content">
-                <Sidebar setSelected={setSelected} list={categories} selectedId={selected} />
-                <div className="professional-main-content">
-                    {selected === 1 && <Bibliographical />}
-                    {selected === 2 && <Methodological />}
-                    {selected === 3 && <Multimedia />}
-                </div>
-            </div>
-        </div>
-        </div>
-    );
-}
+  const [activeTab, setActiveTab] = useState('metod');
+  const categories = [
+    {
+      title: 'ПОСОБИЕ МАТЕРЯМ',
+      description:
+        'Роман рассказывает о жизни старого чабана Танабая и его верного коня Гульсары. Это история о дружбе, изменениях в обществе и воспоминаниях о прошлом, наполненная глубокими размышлениями о человеческой судьбе.',
+    },
+    {
+      title: 'ПОСОБИЕ МАТЕРЯМ',
+      description:
+        'Роман рассказывает о жизни старого чабана Танабая и его верного коня Гульсары. Это история о дружбе, изменениях в обществе и воспоминаниях о прошлом, наполненная глубокими размышлениями о человеческой судьбе.',
+    },
+    {
+      title: 'ПОСОБИЕ МАТЕРЯМ',
+      description:
+        'Роман рассказывает о жизни старого чабана Танабая и его верного коня Гульсары. Это история о дружбе, изменениях в обществе и воспоминаниях о прошлом, наполненная глубокими размышлениями о человеческой судьбе.',
+    },
+    {
+      title: 'ПОСОБИЕ МАТЕРЯМ',
+      description:
+        'Роман рассказывает о жизни старого чабана Танабая и его верного коня Гульсары. Это история о дружбе, изменениях в обществе и воспоминаниях о прошлом, наполненная глубокими размышлениями о человеческой судьбе.',
+    },
+  ];
+  return (
+    <div className="professional-page">
+      <ProfessionalBaner activeTab={activeTab} setActiveTab={setActiveTab} />
+      <ProfessionalSearch />
+      <div className="category-list">
+        {categories.map((category, index) => (
+          <ProfessionalCategory key={index} title={category.title} description={category.description} />
+        ))}
+      </div>
+    </div>
+  );
+};
