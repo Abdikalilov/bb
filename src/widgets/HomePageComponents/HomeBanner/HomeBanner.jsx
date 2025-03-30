@@ -1,5 +1,4 @@
 import image from '../../../shared/homeImages/image.png';
-
 import "./homeBanner.scss";
 
 export const HomeBanner = () => {

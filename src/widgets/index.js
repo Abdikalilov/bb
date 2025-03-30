@@ -4,7 +4,7 @@ export { Footer } from './footer/Footer';
 export { Breadcrumb } from "./breadcrumb/Breadcrumb";
 
 // HomePage компоненты
-export { HomeBanner } from './homePageComponents/HomeBanner/HomeBanner';
+export { HomeBanner } from './homePageComponents/homeBanner/HomeBanner'
 export { HomeRating } from './homePageComponents/HomeRating/HomeRating';
 export { HomeViews } from './homePageComponents/HomeViews/HomeViews';
 export { AfishaEvent } from './homePageComponents/afishaEvent/AfishaEvent';
