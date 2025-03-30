@@ -2,7 +2,7 @@ import image from '../../../shared/homeImages/image.png';
 
 import "./homeBanner.scss";
 
-export function HomeBanner() {
+export const HomeBanner = () => {
   const banner = {
     images: [
       {
@@ -67,5 +67,3 @@ export function HomeBanner() {
 
   );
 }
-
-export default HomeBanner;
