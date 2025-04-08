@@ -3,7 +3,7 @@ export { Footer } from './footer/Footer';
 export { Breadcrumb } from "./breadcrumb/Breadcrumb"
 export { HomeBanner } from './HomePageComponents/HomeBanner/HomeBanner';
 export { HomeRating } from './HomePageComponents/HomeRating/HomeRating';
-export { HomeViews } from './HomePageComponents/HomeViews/HomeViews';
+export { HomeViews } from './homePageComponents/homeViews/HomeViews';
 export { Banner } from "./readerPageComponents/banner/Banner";
 export { Catalog } from './readerPageComponents/catalog/Catalog';
 export { Graphik } from './readerPageComponents/graphik/Graphik';
