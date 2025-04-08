@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const initialState = {
   number: 0,
   list: [],
-  loading: false,
+  loading: false,  
 };
 
 const countSlice = createSlice({

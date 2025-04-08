@@ -1,28 +1,32 @@
-.language-switcher {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 15px;
-    width: 77px;
+.language-switcher{
+    margin:8px 0 0 3px;
 }
 
 .selected-lang {
+    height: 36px;
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 10px 10px 15px 10px;
     background: #105B60;
-    border-radius: 15px;
+    border-radius: 11px;
     transition: 0.3s;
-    width: 100%;
+    padding: 10px 7.5px ;
+    cursor: pointer;
+
+    img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .lang_icon {
+        margin-left: 3px;
+    }
 }
 
 .selected-lang:hover {
     background: #105B60;
 }
+
+
 
 .dropdown {
     display: flex;
@@ -33,7 +37,7 @@
     width: 100%;
     color: #fff;
     position: absolute;
-    top: 30px; 
+    top: 28px;
     z-index: 10;
 }
 

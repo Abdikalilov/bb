@@ -33,7 +33,7 @@ export const ServicesPage = () => {
         <div className='container '   >
             <ServicesBanner/>
 
-            <p className='servicestext'>основные услуги</p>
+            <p className='servicestext main__title'>основные услуги</p>
 
             <div className='servicesblock'   >
                 {

@@ -7,7 +7,7 @@ import './catalogPage.scss';
 export const CatalogPage = () => {
   return (
     <div>
-      <CatalogBanner/>
+      {/* <CatalogBanner/> */}
       <CatalogInput/>
     </div>
   )

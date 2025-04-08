@@ -51,7 +51,12 @@ button{
   width: 100%;
   margin: 0 auto;
 }
-
+.main__title{
+  font-family: "Kino", sans-serif;
+  font-weight: 400;
+  font-size: 33px;
+  margin-bottom: 40px;
+}
 .flexItem {
   display: flex;
 }

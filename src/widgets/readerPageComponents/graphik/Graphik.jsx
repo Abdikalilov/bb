@@ -24,37 +24,37 @@ export const Graphik = () => {
 
   return (
     <div className='grap container'>
-      <h2 className='grap-graphik' >График работы</h2>
-      <table className='grap-table1'border="1" width="100%" >
-        <thead>
+      <h2 className='grap-title ' >График работы</h2>
+      <table className='grap-table' width="100%" >
+        <thead className=''>
           <tr>
-            <th className='grap-data'>День недели</th>
-            <th className='grap-time'>Время</th>
+            <th className='grap-table_head'>День недели</th>
+            <th className='grap-table_head'>Время</th>
           </tr>
         </thead>
         <tbody>
           {schedule.map((item, index) => (
             <tr key={index}>
-              <td className='grap-day'>{item.day}</td>
-              <td className='grap-time2'>{item.time}</td>
+              <td className='grap-table_td'>{item.day}</td>
+              <td className='grap-table_td'>{item.time}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <h2 className='grap-graphik2' >График личного приема граждан директора</h2>
-      <table className='grap-table2'border="1" width="100%" >
+      <h2 className='grap-title' >График личного приема граждан директора</h2>
+      <table className='grap-table' width="100%" >
         <thead>
           <tr>
-            <th className='grap-data2'>Принимающие</th>
-            <th className='grap-time3'>Календарь приёмов</th>
+            <th className='grap-table_head'>Принимающие</th>
+            <th className='grap-table_head'>Календарь приёмов</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item1, index1) => (
             <tr key={index1}>
-              <td className='grap-day2'>{item1.day2}</td>
-              <td className='grap-time4'>{item1.time2}</td>
+              <td className='grap-table_td'>{item1.day2}</td>
+              <td className='grap-table_td'>{item1.time2}</td>
             </tr>
           ))}
         </tbody>

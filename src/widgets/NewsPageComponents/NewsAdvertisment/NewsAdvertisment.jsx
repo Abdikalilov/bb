@@ -1,7 +1,6 @@
 import { CardAfisha } from "../../../features";
 import "./newsAdvertisment.scss";
-export const NewsAdvertisment = ({title}) => {
-
+export const NewsAdvertisment = ({ title }) => {
     
 const events = [
   { id:1,
@@ -32,7 +31,7 @@ const events = [
       "Токтогула Сатылганова – место, где книги открывают двери в мир знаний и вдохновения. Наш фонд включает разнообразную литературу – от классики до современных бестселлеров, а также электронные ресурсы для учебы и досуга. Мы создаем уютное пространство для чтения, развития и творчества, регулярно проводим лекции, мастер-классы и встречи с авторами.",
     image: "https://img.freepik.com/premium-photo/girl-reading-book-that-she-took-from-shelves-library_280538-2423.jpg",
   },
-  { id:5,
+  { id: 5,
     title: "ВЫСТАВКА: КОД ЦИВИЛИЗАЦИЙ",
     date: "Время проведения: с 10 декабря 2024 года по 25 января 2025 года",
     description:

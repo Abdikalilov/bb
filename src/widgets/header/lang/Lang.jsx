@@ -1,5 +1,5 @@
-import ru from '../../../shared/image/image 2 (1).svg';
-import kg from '../../../shared/image/image 3.svg';
+import kg from '../../../shared/image/ky.svg';
+import ru from '../../../shared/image/ru.svg';
 import { useTranslation } from "react-i18next";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useState } from 'react';
@@ -8,27 +8,35 @@ const Lang = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleChangeLang = () => {
+  const handleChangeLang = ({ target: { value } }) => {
     const newLang = i18n.language === "ru" ? "kg" : "ru";
     i18n.changeLanguage(newLang);
     setIsOpen(false);
+    i18n.changeLanguage(value);
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   };
+
 
   return (
     <div className="language-switcher" style={{ position: 'relative' }}>
       <div className="selected-lang"
         onClick={() => setIsOpen(!isOpen)}
-        style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px' }}
+        onChange={handleChangeLang}
+        value={i18n.language}
+        defaultValue={i18n.language}
       >
         <img
           src={i18n.language === "ru" ? ru : kg}
           alt={i18n.language === "ru" ? "Ru" : "Kg"}
-          style={{ width: 30, height: 20 }}
         />
         <MdOutlineKeyboardArrowDown
-          size={20}
+          className='lang_icon'
           style={{
             color: "white",
+            width: 20,
+            height: 20,
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0)',
             transition: 'transform 0.3s ease'
           }}

@@ -1,5 +1,5 @@
 import { CardBook } from "../../../features";
-import "./newsBookUpdate.scss";
+import "./NewsBookUpdate.scss";
 
 export const NewsBooksUpdate = () => {
   const cards = [
@@ -52,9 +52,9 @@ export const NewsBooksUpdate = () => {
   return (
     <div className="container">
       <div className="NewsBooksUpdate_list">
-        <div className="NewsBooksUpdate_header">
+        <h2 className="NewsBooksUpdate_header main__title">
           Обявление о поступление книг
-        </div>
+        </h2>
         {cards.map((card) => (
           <CardBook key={card.id}
             image={card.image}

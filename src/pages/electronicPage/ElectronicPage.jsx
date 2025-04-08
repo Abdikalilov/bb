@@ -4,7 +4,7 @@ import "./electronicPage.scss";
 export const ElectronicPage = () => {
   return (
     <div className="container">
-      <ElectronicBanner/>
+      {/* <ElectronicBanner/> */}
       <ElectronicSearch/>
       <ElectronicPartners/>
     </div>

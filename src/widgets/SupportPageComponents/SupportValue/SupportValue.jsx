@@ -1,4 +1,4 @@
-import './supportValue.scss';
+import './SupportValue.scss';
 import science from '../../../shared/img/science.png';
 import star from '../../../shared/img/star.png';
 
@@ -35,7 +35,7 @@ export function SupportValue() {
     return (
         <section>
             <div className="support_value">
-                <h1 className="title_value">ЦЕННОСТИ БИБЛИОТЕКИ</h1>
+                <h1 className="title_value  ">ЦЕННОСТИ БИБЛИОТЕКИ</h1>
                 <div className="value__container">
                     {
                         item.map((item) => (

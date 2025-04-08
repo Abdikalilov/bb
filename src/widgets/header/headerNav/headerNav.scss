@@ -2,28 +2,18 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 10px;
+    // gap: 30px;
+    justify-content: space-between;
     width: 100%;
-    margin: 15px 0;
+
     &_link {
         text-decoration: none;
         color: #105B60;
         font-weight: 500;
-        font-size: clamp(10px, 1vw, 16px);
+        font-size: clamp(10px, 4vw, 15px);
         white-space: nowrap;
         transition: color 0.3s ease;
+        // margin: 0 10px;
 
-
-    }
-
-
-
-}
-
-@media screen and (max-width: 1024px) {
-
-    .header_nav-top,
-    .header_nav-bottom {
-        display: none;
     }
 }

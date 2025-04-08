@@ -1,57 +1,38 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "./breadcrumb.scss"
+import "./breadcrumb.scss";
 
 export const Breadcrumb = ({ routes }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const { t } = useTranslation();
 
-  if (location.pathname === '/') return null;
+  if (pathname === "/") return null;
 
-  const paths = location.pathname.split("/").filter(Boolean);
+  const paths = pathname.split("/").filter(Boolean);
+  const navigationPaths = paths[0]?.includes('detail')
+    ? [paths[0].split('-')[0], paths[0]]
+    : paths;
 
-  const titleTranslations = {
-    "/about": "О библиотеке",
-    "/support": "Поддержать библиотеку",
-    "/news": "Новости",
-    "/services": "Услуги",
-    "/catalog": "Каталог",
-    "/afisha": "Афиша мероприятий",
-    "/professional": "Профессиональная деятельность",
-    "/reader": "Читателям",
-    "/electronic": "Электронная библиотека",
-    "/project": "Наши проекты"
-  };
+  const route = routes.find(r => r.path.startsWith(`/${paths[0]}`));
+  const baseTitle = t(route?.title);
 
   return (
-    <nav className=" container breadcrumb">
-      <Link to="/" className="breadcrumb__link">{t("ГЛАВНАЯ СТРАНИЦА")}</Link>
-      {paths.length > 0 && <span className="breadcrumb__separator">{'>'}</span>}
-      {paths.map((path, index) => {
-        const href = "/" + paths.slice(0, index + 1).join("/");
-        const isLast = index === paths.length - 1;
-
-        const route = routes.find(r => {
-          const routePath = r.path.split('/');
-          const currentPath = href.split('/');
-
-          if (routePath.length !== currentPath.length) return false;
-
-          return routePath.every((segment, i) =>
-            segment.startsWith(':') || segment === currentPath[i]
-          );
-        });
-
-        if (!route?.title) return null;
-
-        const translatedTitle = t(titleTranslations[href] || route.title);
-
-        return (
-          <span key={href} className={isLast ? "breadcrumb__active" : "breadcrumb__link"}>
-            {isLast ? translatedTitle : <Link to={href}>{translatedTitle}</Link>}
+    <div className="container">
+      <nav className="breadcrumb">
+        <Link to="/" className="breadcrumb__link">{t("main")}</Link>
+        {navigationPaths.map((path, index) => (
+          <span key={path}>
+            <span className="breadcrumb__separator">{">"}</span>
+            <span className={index === navigationPaths.length - 1 ? "breadcrumb__active" : "breadcrumb__link"}>
+              {path.includes('detail') ? (
+                <span>  {t("detailed")} {baseTitle}</span>
+              ) : (
+                <Link to={`/${path}`}>{baseTitle}</Link>
+              )}
+            </span>
           </span>
-        );
-      })}
-    </nav>
+        ))}
+      </nav>
+    </div>
   );
-}
+};

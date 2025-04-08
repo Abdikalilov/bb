@@ -4,16 +4,22 @@
 
     &-cards{
         display: flex;
-        gap: 20px;
+        gap: 30px;
         margin-top: 2%;
 
         &-card{
-            width: 24%;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+
 
             &-img{
+                border: 12px solid #005f5f;
+                border-radius: 8px;
                 width: 100%;
-                background-color: #105B60;
-                border-radius: 10px;
+                height: 65%;
+                object-fit: cover;
+
             }
         }
         h3{
@@ -74,6 +80,8 @@
     }
     .management-container-cards-card-img{
         width: 100%;
+        border: 8px solid #005f5f;
+
     }
     .management-title{
         font-size: 22px;
@@ -105,6 +113,21 @@
     }
     .management-container-cards-card-img{
         width: 100%;
+        height: 58%;
+        border: 6px solid #005f5f;
+
+    }
+}
+@media screen and (max-width: 425px) {
+    .management-container-cards-card-img{
+        width: 120%;
+        height: 57%;
+    }
+    .management-container-cards{
+        gap: 47px;
+    }
+    .management-container-cards-card{
+        width: 40%;
     }
 }
 @media screen and (max-width: 375px) {
@@ -129,7 +152,9 @@
         width: 40%;
     }
     .management-container-cards-card-img{
-        width: 120%;
+        width: 122%;
+        border: 4px solid #005f5f;
+
     }
 }
 @media screen and (max-width: 320px) {
@@ -152,8 +177,10 @@
     }
     .management-container-cards-card{
         width: 40%;
+        height: 80%;
     }
     .management-container-cards-card-img{
-        width: 123%;
+        width: 122%;
+        height: 140px;
     }
 }

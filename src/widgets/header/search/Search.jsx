@@ -9,12 +9,7 @@ const Search = () => {
 
   return (
     <div className="search">
-      <div className="search_desktop">
-        <input type="text" placeholder="Поиск" />
-        <button>
-          <CiSearch />
-        </button>
-      </div>
+      
       <div className="search_icon" onClick={() => setIsOpenMobile(true)}>
         <CiSearch />
       </div>

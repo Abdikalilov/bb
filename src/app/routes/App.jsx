@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import '../styles/app.scss';
 import {
   HomePage,
@@ -17,92 +16,111 @@ import {
   ElectronicPage,
   ProfessionalPage
 } from '../../pages';
-import { Footer, Header, Breadcrumb } from '../../widgets';
+import { Footer, Header, Breadcrumb, Scroll } from '../../widgets';
+
+import { useEffect } from 'react';
 
 export const routesArr = [
   {
     path: '/',
-    title: "Главная",
+    title: "main",
     element: <HomePage />
   },
   {
     path: '/afisha',
-    title: "Афиша мероприятий",
+    title: "afisha",
     element: <AfishaPage />
   },
   {
     path: '/afisha-detail/:id',
-    title: "Афиша мероприятий",
+    title: "afisha",
     element: <AfishaDetail />
   },
   {
     path: '/services',
-    title: "Услуги",
+    title: "services",
     element: <ServicesPage />
   },
   {
     path: '/project',
-    title: "Наши проекты",
+    title: "projects",
     element: <ProjectPage />
   },
   {
     path: '/project-detail/:id',
-    title: "Детали проекта",
+    title: "projects",
     element: <ProjectDetail />
   },
   {
     path: '/news',
-    title: "Новости",
+    title: "news",
     element: <NewsPage />
   },
   {
     path: '/news-detail/:id',
-    title: "Новости",
+    title: "news",
     element: <NewsDetail />
   },
   {
     path: '/catalog',
-    title: "Каталог",
+    title: "catalog",
     element: <CatalogPage />
   },
   {
     path: '/reader',
-    title: "Читателям",
+    title: "readers",
     element: <ReaderPage />
   },
   {
     path: '/about',
-    title: "О библиотеки",
+    title: "about",
     element: <AboutPage />
   },
   {
     path: '/support',
-    title: "Поддержать библеотеку",
+    title: "support",
     element: <SupportPage />
   },
   {
     path: '/electronic',
-    title: "Электронная библиотека",
+    title: "electronic",
     element: <ElectronicPage />
   },
   {
     path: '/professional',
-    title: "Профисионалная деятелность",
+    title: "professional",
     element: <ProfessionalPage />
   },
 ];
 
+const ScrollToTop = ({ children }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [pathname]);
+  return children;
+};
+
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Breadcrumb routes={routesArr} />
-      <Routes>
-        {routesArr.map((item, index) => (
-          <Route key={index} path={item.path} element={item.element} />
-        ))}
-      </Routes>
-      <Footer />
+      <ScrollToTop>
+        <Header />
+
+        <Breadcrumb routes={routesArr} />
+        <Scroll />
+
+        <Routes>
+          {routesArr.map((item, index) => (
+            <Route key={index} path={item.path} element={item.element} />
+          ))}
+        </Routes>
+        <Footer />
+      </ScrollToTop>
+
     </BrowserRouter>
   );
 }

@@ -1,37 +1,41 @@
-.payment { 
+.payment {
     .title_payment {
         color: #105B60;
-        margin-top: 100px;
-        font-size: 30px;
+        font-family: Kino;
+        font-weight: 400;
+        font-size: 33px;
+        margin-top: 140px;
+        margin-bottom: 45px;
+
     }
 
     .block_py {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
         background-color: #105B60;
         width: 100%;
-        height: 160px;
         border-radius: 20px;
         margin-top: 20px;
+        padding: 52px 60px;
     }
 
     .payment_text {
+        font-family: Kino;
         color: #fff;
-        margin-left: 60px;
-        font-size: 45px;
+        font-size: 34px;
     }
 
     .img_payment {
         width: 78px;
         border-radius: 15px;
-        margin-right: 60px; 
     }
 
     @media (max-width: 1024px) {
         .title_payment {
             font-size: 25px;
         }
+
         .payment_text {
             font-size: 40px;
         }
@@ -72,8 +76,9 @@
             margin-right: 30px;
         }
     }
+
     @media (max-width: 400px) {
-      
+
 
         .payment_text {
             font-size: 20px;

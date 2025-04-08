@@ -1,8 +1,13 @@
 .support_value {
+    padding: 140px 0 0 0;
+
     .title_value {
-        margin-top: 100px;
         color: #105B60;
         font-size: 30px;
+        font-family: Kino;
+        font-weight: 400;
+        font-size: 36px;
+
     }
 
     .value__container {
@@ -36,6 +41,7 @@
             }
 
             &-title {
+                margin-top: 10px;
                 font-size: 18px;
                 color: #FFFFFF;
             }
@@ -47,6 +53,7 @@
         .title_value {
             font-size: 25px;
         }
+
         .value__container {
             flex-wrap: wrap;
 
@@ -67,6 +74,7 @@
         .title_value {
             font-size: 20px;
         }
+
         .value__container {
             flex-wrap: wrap;
             flex-direction: column;

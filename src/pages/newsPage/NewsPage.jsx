@@ -1,5 +1,5 @@
 import { NewsBanner, NewsBooksUpdate ,NewsAdvertisment  } from "../../widgets";
-import './newsPage.scss';
+
 
 export const NewsPage = () => {
   return (

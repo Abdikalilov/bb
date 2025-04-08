@@ -38,7 +38,7 @@ export const History = () => {
     ]
     return (
         <div className='history-container container'>
-            <h1 className='history-container-title'>ИСТОРИЯ</h1>
+            <h1 className='history-container-title main__title'>ИСТОРИЯ</h1>
             <div>
                 <img className='history-container-img' src={historyImg} alt="" />
             </div>

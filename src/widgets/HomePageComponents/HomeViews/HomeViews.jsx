@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
-import "./homeViews.scss";
+import "./HomeViews.scss";
 
-export const HomeViews = ({mobile})=> {
+export function HomeViews({mobile}) {
  
 
     const contentData = [
@@ -59,5 +59,7 @@ export const HomeViews = ({mobile})=> {
    
     );
 }
+
+export default HomeViews;
 
 

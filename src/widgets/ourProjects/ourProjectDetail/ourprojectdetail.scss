@@ -1,125 +1,154 @@
-
-.ourProject{
-    &_title{
-        font-weight: 900;
-        font-size: 46px;
-        color: #105B60;
-        margin-bottom: 8px;
+.ourProject {
+    &_title {
+      font-weight: 900;
+      font-size: 46px;
+      color: #105B60;
+      margin-bottom: 8px;
     }
-
-    &_group{
+  
+    &_group {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid #5A5C62CC;
+      padding: 20px 0px;
+      flex-direction: row;
+      align-items: start;
+  
+      &_img {
+        width: 100%;
         display: flex;
-        border-top: 1px solid #5A5C62CC;
-        padding: 20px 0px;
-        &_img{
-            width: 50%;
-        img{
-            width: 100%;
-            border-radius: 5px;
-            margin: 0 auto;
+  
+        img {
+          width: 100%;
+          max-width: 550px;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 15px;
         }
+      }
+  
+      &_text {
+        font-size: 18px;
+        width: 100%;
+  
+        h2 {
+          font-size: 22px;
+          margin-top: 15px;
         }
-        &_text{
-            width: 40%;
-            margin-left: 15px;
-        
-        h2{
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 28px;
-
+  
+        &_description {
+          border-top: 1px solid #5A5C62CC;
+          margin-top: 15px;
+  
+          &_part {
+            margin-top: 20px;
+          }
         }
-        &_description{
-            border-top: 1px solid #5A5C62CC;
-            margin-top: 10px;
-
-            &_part{
-                width: 100%;
-                margin-top: 20px;
-              }
-        }
-        
-
-        }
+      }
+      &_text-two {
+        margin-top: 20px;
+        width: 100%;
+      }
     }
 }
-
-
-
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .ourProject{
         &_group{
-            flex-direction: column;
-
-            &_img{
-                width: 100%;
-            }
-
             &_text{
-                width: 100%;
+                font-size: 16.5px;
+            }
+            &_text-two{
+                font-size: 16.5px;
+            }
+            &_img{
+                img{
+                    height: 385px;
+                }
             }
         }
-        
     }
 }
-
 @media screen and (max-width: 992px) {
     .ourProject{
-        h1{
-            font-size: 25px;
-        }
         &_group{
-            flex-direction: column;
-
-            &_img{
-                width: 100%;
-            }
-
             &_text{
-                width: 95%;
+                font-size: 12.2px;
+
+                h2{
+                    font-size: 20px;
+                }
+            }
+            &_text-two{
+                margin-top: 15px;
+                font-size: 12px;
+            }
+            &_img{
+                img{
+                    height: 320px;
+                }
             }
         }
-        
     }
 }
-
+@media (min-width: 769px) {
+    .ourProject_group{
+      flex-direction: row;
+      align-items: flex-start;
+      &_img {
+        width: 45%;
+        height: auto;
+      }
+      &_text {
+        width: 50%;
+        margin-left: 20px;
+      }
+    }
+}
 @media screen and (max-width: 768px) {
-    .ourProject{
-        h1{
-            font-size: 25px;
-        }
-        &_group{
-            flex-direction: column;
-
-            &_img{
-                width: 100%;
-            }
-
-            &_text{
-                width: 95%;
-            }
-        }
-        
+    .ourProject_title{
+        font-size: 36px;
     }
-}
-
-
-@media screen and (max-width: 576px) {
-    .ourProject{
-        h1{
+    .ourProject_group{
+        &_img{
+            img{
+                height: 350px;
+            }
+        }
+        &_text{
+            font-size: 18px;
+            h2{
+                margin-top: 5px;
+                font-size: 20px;
+            }
+            &_description{
+                margin-top:5px;
+                &_part{
+                    margin-top: 10px;
+                }
+            }
+        }
+        &_text-two{
             font-size: 18px;
         }
-        &_group{
-            flex-direction: column;
-
-            &_img{
-                width: 100%;
-            }
-
-           
+    }
+}
+@media screen and (max-width: 500px) {
+    .ourProject_title{
+        font-size: 30px;
+    }
+    .ourProject_group_img{
+        img{
+            height: 320px;
         }
-        
+    }
+}
+@media screen and (max-width: 420px) {
+    .ourProject_title{
+        font-size: 24px;
+    }
+    .ourProject_group_img{
+        img{
+            height: 260px;
+        }
     }
 }

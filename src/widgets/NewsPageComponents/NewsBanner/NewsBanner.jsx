@@ -1,14 +1,16 @@
-import nenoigirl from '../../../shared/img/books.svg';
-import nenoibook from '../../../shared/img/group.svg';
-import laptop from '../../../shared/img/laptop.svg';
-import './newsBanner.scss';
+import './newsBanner.scss'
+import nenoigirl from '../../../shared/img/books.svg'
+import nenoibook from '../../../shared/img/group.svg'
+import laptop from '../../../shared/img/laptop.svg'
+
+
 
 export const NewsBanner = () => {
     return (
         <div >
             <div className="servicesBanner">
                 <div className="container">
-                    <h1 className='servicesBanner_title'>
+                    <h1 className='servicesBanner_title main__title'>
                         Новости
                     </h1>
                     <div className='servicesBanner_group '>

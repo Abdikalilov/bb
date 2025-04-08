@@ -1,5 +1,6 @@
 import { CardNews } from '../../../features';
-import './homeNews.scss';
+import './HomeNews.scss';
+
 export const HomeNews = () => {
     const newsItems = [
         {
@@ -52,7 +53,7 @@ export const HomeNews = () => {
 
     return (
         <div className="home-news">
-            <h1 className="home-news__title">НОВОСТИ</h1>
+            <h1 className="home-news__title main__title">НОВОСТИ</h1>
             <div className="home-news__list">
                 {newsItems.map((news, index) => (
                     <div key={index} className="home-news__card">

@@ -4,7 +4,7 @@ export const AfishaPage = () => {
   return (
     <div>
       <AfishaBanner />
-      <AfishaEvents />
+      <AfishaEvents /> 
 
     </div>
   )

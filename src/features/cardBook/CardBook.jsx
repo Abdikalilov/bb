@@ -11,8 +11,8 @@ export const CardBook = ({ image, author, description, title }) => {
           <img src={image} alt="" />
         </div>
         <div className="cardBook_text">
-          <h2 className="cardBook_text_name">📖 НАЗВАНИЕ КНИГИ: {title}</h2>
-          <h4 className="cardBook_text_author">✍️ Автор: {author}</h4>
+          <h2 className="cardBook_text_name"> <span>📖 НАЗВАНИЕ КНИГИ:</span>{title}</h2>
+          <h4 className="cardBook_text_author"><span> ✍️ Автор:</span> {author}</h4>
           <p className="cardBook_text_description">
             <span>📜 Описание:</span> {description}
           </p>
@@ -35,7 +35,8 @@ export const CardBook = ({ image, author, description, title }) => {
           </div>
         </div>
         <p className="cardBook_text_description">
-          <span>📜 Описание:</span> {description}
+          <span>📜 Описание:</span> 
+          {description}
         </p>
         <div className="cardBook_btn">
           <button className="cardBook_btn_read">читать</button>

@@ -1,9 +1,18 @@
 import React from 'react';
 import './professionalBaner.scss';
 
+
+
+
+
+
+
+
+
 export const ProfessionalBaner = ({ activeTab, setActiveTab }) => {
+  
   return (
-    <div className="professional-baner">
+    <div className="professional-baner container">
       <button
         className={`professional-baner__button ${activeTab === 'multi' ? 'active' : ''}`}
         onClick={() => setActiveTab('multi')}

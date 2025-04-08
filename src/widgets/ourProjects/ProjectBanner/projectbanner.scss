@@ -4,19 +4,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
+    padding: 30px 0;
     overflow: hidden;
 
 
     .rotating-wrapper {
         position: absolute;
-        left: 40%;
-        top: 56%;
+        left: 41%;
+        top: 60%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        width: 290px;
-        height: 290px;
+        width: 250px;
+        height: 250px;
         transition: all 0.3s ease;
         border-radius: 50%;
     }
@@ -36,84 +35,125 @@
     }
 
     #rotatingText {
-        animation: rotate-circle 20s linear infinite;
+        animation:
+            rotate-circle 20s linear infinite,
+            pulse 1s ease-in-out ;
         transition: all 0.3s ease;
-        border-radius: 50%;
-
+        transform-origin: center;
         &:hover {
-            animation-play-state: paused;
-            transform: scale(1.05);
+            animation-play-state: paused, paused;
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes pulse {
+        from{
+            transform: scale(0) ;
+        }
+
+        to {
+            transform: scale(1) ;
         }
     }
 
     @keyframes rotate-circle {
         from {
-            transform: rotate(0);
+            transform: rotate(0deg);
         }
 
-        to {
+        to{
             transform: rotate(360deg);
         }
     }
 
     .projectbanner_img1,
     .projectbanner_img2 {
-        margin: 0 10px;
-        width: 48%;
+        margin: 5px;
+        width: 49%;
         height: auto;
-        max-height: 600px;
+        max-height: 610px;
         object-fit: cover;
         border-radius: 20px;
         transition: transform 0.3s ease;
 
+
     }
 
     .projectbanner_img1 {
-        margin-top: 60px;
+        margin-top: 120px;
+        animation: img1 0.5s ease-in-out;
+
     }
+
+    .projectbanner_img2 {
+        animation: img2 0.5s ease-in-out;
+
+    }
+
+    @keyframes img1 {
+        from {
+            transform: translateX(300px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes img2 {
+        from {
+            transform: translateX(-300px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
 
     h1 {
         color: #105B60;
-        font-size: 36px;
-        font-weight: 800;
+        font-size: 46px;
+        font-weight: 400;
         margin-bottom: 40px;
         position: absolute;
-        top: 20px;
-        left: 20px;
-        max-width: 700px;
+        top: 25px;
+        left: 0px;
+        max-width: 800px;
         font-family: kino;
         z-index: 2;
         transition: all 0.3s ease;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+        animation: text11 1s ease-in-out;
+
     }
 
-    h3 {
-        color: #105B60;
-        font-size: 28px;
-        font-weight: 600;
-        position: absolute;
-        bottom: 40px;
-        right: 40%;
-        transform: translateX(50%);
-        text-align: start;
-        max-width: 220px;
-        z-index: 2;
-        transition: all 0.3s ease;
+    @keyframes text11 {
+        from {
+            transform: translateX(-1000px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
     }
+
+
+
 }
+
 
 @media (max-width: 1400px) {
     .projectBanner {
 
         .rotating-wrapper {
-            top: 60%;
-            width: 250px ;
+            top: 62%;
+            width: 250px;
         }
 
 
-        h3 {
-
-            bottom: 20px;
+        h1 {
+            font-size: 40px;
         }
 
         .text {
@@ -129,16 +169,17 @@
         padding: 30px 0;
 
         .rotating-wrapper {
-            top: 62%;
-            width: 230px ;
+            top: 63%;
+            width: 200px;
         }
 
 
-        h3 {
-            font-size: 22px ;
-            right: 38% ;
-            width: 180px;
-            bottom: 20px;
+        h1 {
+            font-size: 35px;
+        }
+
+        .projectbanner_img1 {
+            margin-top: 70px;
         }
 
     }
@@ -150,19 +191,19 @@
     .projectBanner {
 
         .rotating-wrapper {
-            top: 76% ;
-            width: 150px ;
+            top: 73%;
+            width: 150px;
         }
 
         h1 {
-            font-size: 24px ;
-            max-width: 500px ;
+            font-size: 24px;
+            max-width: 500px;
         }
 
         h3 {
-            font-size: 18px ;
-            right: 38% ;
-            max-width: 145px ;
+            font-size: 18px;
+            right: 38%;
+            max-width: 145px;
             bottom: 20px;
         }
 
@@ -176,20 +217,20 @@
 
         .rotating-wrapper {
             left: 42%;
-            top: 74% ;
-            width: 120px ;
+            top: 74%;
+            width: 120px;
             height: 200px;
         }
 
         h1 {
-            font-size: 18px ;
-            max-width: 400px ;
+            font-size: 18px;
+            max-width: 400px;
         }
 
         h3 {
-            font-size: 12px ;
-            right: 38% ;
-            max-width: 95px ;
+            font-size: 12px;
+            right: 38%;
+            max-width: 95px;
             bottom: 30px;
         }
 
@@ -248,17 +289,17 @@
 
         .text {
             fill: #fff;
-            font-size: 11px;
+            font-size: 16px;
             letter-spacing: 1.8px;
         }
 
         h3 {
-            width: 300px ;
+            width: 300px;
             position: relative;
-            right: 20px ;
+            right: 20px;
             bottom: auto;
             margin: 15px auto;
-            font-size: 22px ;
+            font-size: 22px;
             order: 4;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

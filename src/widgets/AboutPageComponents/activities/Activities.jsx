@@ -24,11 +24,16 @@ export const Activities = () => {
             id: 4,
             title: 'Прозрачность и ответственность',
             description: 'Соблюдение норм и процедур способствует открытости работы библиотеки, повышает доверие пользователей и дает возможность отслеживать эффективность работы каждого отдела.'
+        },
+        {
+            id: 4,
+            title: 'Прозрачность и ответственность',
+            description: 'Соблюдение норм и процедур способствует открытости работы библиотеки, повышает доверие пользователей и дает возможность отслеживать эффективность работы каждого отдела.'
         }
     ]
     return (
         <div className='activities-container container' >
-            <h1 className='activities-container-title' >АКТЫ, РЕГУЛИРУЮЩИЕ ДЕЯТЕЛЬНОСТЬ</h1>
+            <h1 className='activities-container-title main__title' >АКТЫ, РЕГУЛИРУЮЩИЕ ДЕЯТЕЛЬНОСТЬ</h1>
             <div className='activities-container-cards' >
             {
                     cards.map((cards) => (

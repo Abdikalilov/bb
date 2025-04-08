@@ -1,14 +1,16 @@
-import  { useState, useEffect, useRef } from 'react';
-import './electronicSearch.scss';
-import { CardBook } from '../../../features';
+import { useState } from 'react';
+import './ElectronicSearch.scss';
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
+import { IoCloseSharp } from "react-icons/io5";
+import { CardBook } from '../../../features/cardBook/CardBook';
 
 export const ElectronicSearch = () => {
     const [authorFilter, setAuthorFilter] = useState('');
     const [titleFilter, setTitleFilter] = useState('');
     const [keywordFilter, setKeywordFilter] = useState('');
     const [showPopular, setShowPopular] = useState(false);
-    const burgerRef = useRef(null);
-    const inpRef = useRef(null);
+    const [isMenuOpen, setsMenuOpen] = useState(false);
+    const [visibleCards, setVisibleCards] = useState(5);
 
     const cards = [
         {
@@ -45,6 +47,41 @@ export const ElectronicSearch = () => {
             author: "Харуки Мураками",
             description: "Глубокий роман о первой любви, утрате и поиске смысла жизни. История Тору Ватанабэ, вспоминающего свою юность и трагические события, изменившие его навсегда.",
             image: 'https://www.litres.ru/pub/c/cover/10858418.jpg', popular: false
+        },
+        {
+            id: 6,
+            title: "ДЖЕЙН ЭЙР",
+            author: "Шарлотта Бронте",
+            description: "Роман о сложных отношениях между Джейн Эйр и Эдвардом Рочестером, который скрывает мрачные тайны своего прошлого.",
+            image: 'https://i.pinimg.com/474x/1a/c6/4d/1ac64de8d7499a3fce00305d62f9b699.jpg', popular: false
+        },
+        {
+            id: 7,
+            title: "ВИНОВАТЫ ЗВЁЗДЫ",
+            author: "Джон Грин",
+            description: "История любви двух подростков, которые борются с раком и сталкиваются с тяжёлыми вопросами жизни и смерти.",
+            image: 'https://i.pinimg.com/736x/ea/69/76/ea697629b7028a067e0c2c170aad54f5.jpg', popular: true
+        },
+        {
+            id: 8,
+            title: "В КОНЦЕ ОНИ ОБА УМРУТ",
+            author: "Адам Силвер",
+            description: "Два подростка узнают, что им осталось жить всего несколько дней, и решают прожить их, не оглядываясь назад.",
+            image: 'https://i.pinimg.com/736x/0c/97/eb/0c97eb82c32ad60cacd82d753c6f236c.jpg', popular: false
+        },
+        {
+            id: 9,
+            title: "МАЛЕНЬКИЕ ЖЕНЩИНЫ",
+            author: "Луиза Мэй",
+            description: "История о четырёх сестрах, которые взрослеют, сталкиваются с трудностями и учат друг друга важности семьи и любви.",
+            image: 'https://i.pinimg.com/736x/46/f2/cc/46f2ccd2c5ccb81313f130fa131e48f4.jpg', popular: true
+        },
+        {
+            id: 10,
+            title: "МАЛЕНЬКИЙ ПРИНЦ",
+            author: "Антуан де Сент-Экзюпери",
+            description: "Философская сказка о маленьком принце, который путешествует по планетам, встречая различные персонажи, каждый из которых представляет собой аспект человеческой природы.",
+            image: 'https://i.pinimg.com/474x/fc/aa/18/fcaa18b5bd45f8c584f1b2e85699e34b.jpg', popular: true
         }
     ];
 
@@ -58,27 +95,25 @@ export const ElectronicSearch = () => {
 
     const displayedCards = showPopular ? filteredCards.filter(card => card.popular) : filteredCards;
 
-    useEffect(() => {
-        const toggleMenu = () => {
-            inpRef.current.classList.toggle('open');
-        };
-        if (burgerRef.current) {
-            burgerRef.current.addEventListener('click', toggleMenu);
-        }
-        return () => {
-            if (burgerRef.current) {
-                burgerRef.current.removeEventListener('click', toggleMenu);
-            }
-        };
-    }, []);
+    const toggleModal = () => setsMenuOpen(!isMenuOpen);
+
+    const loadMoreCards = () => {
+        setVisibleCards(visibleCards + 5);
+    };
+
+    const hideCards = () => {
+        setVisibleCards(5);
+    };
 
     return (
         <div className="electronicSearch container">
-            <h1 className="electronicSearch_title">ЭЛЕКТРОННЫЕ КАТАЛОГИ</h1>
+            <h1 className="electronicSearch_title ">электронный  каталог</h1>
             <div className="electronicSearch_filters">
+                <div className="electronicSearch_filters_btns">
                 <div className="electronicSearch_filters_btn">
-                    <button className={`electronicSearch_filters_btn_all ${!showPopular ? "active" : ""}`} onClick={() => setShowPopular(false)}>Все</button>
-                    <button className={`electronicSearch_filters_btn_popular ${showPopular ? "active" : ""}`} onClick={() => setShowPopular(true)}>Популярные</button>
+                    <button className={` ${!showPopular ? "electronicSearch_filters_btn_allactive" : "electronicSearch_filters_btn_all"}`} onClick={() => setShowPopular(false)}>Все</button>
+                    <button className={` ${showPopular ? "electronicSearch_filters_btn_popularActive" : "electronicSearch_filters_btn_popular"}`} onClick={() => setShowPopular(true)}>Популярные</button>
+                </div>
                 </div>
                 <input
                     className="electronicSearch_filters_inp"
@@ -101,13 +136,55 @@ export const ElectronicSearch = () => {
                     value={keywordFilter}
                     onChange={(e) => setKeywordFilter(e.target.value)}
                 />
-                <div ref={burgerRef} className="electronicSearch_filters-burger">
-                    <span></span>
+                <div className="electronicSearch_filters-burger">
+                    <button onClick={() => {
+                        toggleModal()
+                    }}>
+                        <HiAdjustmentsHorizontal />
+                    </button>
                 </div>
             </div>
 
+            <div className='modall'>
+                {
+                    isMenuOpen && (
+
+                        <div className='modal_content'>
+                            <button onClick={() => {
+                                toggleModal()
+                            }}>
+                                <IoCloseSharp />
+                            </button>
+                            <h2 className="modal_content-title">Расширенный поиск</h2>
+                            <input
+                                className="modal_content-inputs"
+                                type="text"
+                                placeholder="Автор"
+                                value={authorFilter}
+                                onChange={(e) => setAuthorFilter(e.target.value)}
+                            />
+                            <input
+                                className="modal_content-inputs"
+                                type="text"
+                                placeholder="Название документа"
+                                value={titleFilter}
+                                onChange={(e) => setTitleFilter(e.target.value)}
+                            />
+                            <input
+                                className="modal_content-inputs"
+                                type="text"
+                                placeholder="Ключевое слово"
+                                value={keywordFilter}
+                                onChange={(e) => setKeywordFilter(e.target.value)}
+                            />
+
+                        </div>
+                    )
+                }
+            </div>
+
             <div className="electronicSearch_info">
-                {displayedCards.map((card) => (
+                {displayedCards.slice(0, visibleCards).map((card) => (
                     <CardBook key={card.id}
                         image={card.image}
                         author={card.author}
@@ -117,12 +194,18 @@ export const ElectronicSearch = () => {
                     />
                 ))}
                 <div className="electronicSearch_button">
-                    <button className="electronicSearch_button-more">Ещё</button>
+                    {visibleCards < displayedCards.length && (
+                        <button className="electronicSearch_button-more" onClick={loadMoreCards}>Ещё</button>
+                    )}
+                    {visibleCards > 5 && (
+                        <button className="electronicSearch_button-more" onClick={hideCards}>Скрыть</button>
+                    )}
                 </div>
             </div>
         </div>
     );
 };
+
 
 
 

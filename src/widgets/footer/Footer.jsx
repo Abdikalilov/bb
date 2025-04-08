@@ -84,7 +84,8 @@ export const Footer = () => {
                 <NavLink className="link" to={"/catalog"}>Каталог</NavLink>
                 <NavLink className="link" to={"/reader"}>Читателям</NavLink>
                 <NavLink className="link" to={"/project"}>Проекты</NavLink>
-              </div>
+
+                </div>
             </div>
           </div>
         </div>
@@ -114,34 +115,34 @@ export const Footer = () => {
           <p>Политика конфидециональнности</p>
         </div>
         <div className="footer_bottom mobile">
-  <div className="footer_views">
-    <img src={Akar} alt="" className="footer_views_akar" />
-    <img src={Rectangle} alt="" />
-    <div>
-      <div className="img">
-        <div>
-          <FaRegEye />
-          <p>5930</p>
+          <div className="footer_views">
+            <img src={Akar} alt="" className="footer_views_akar" />
+            <img src={Rectangle} alt="" />
+            <div>
+              <div className="img">
+                <div>
+                  <FaRegEye />
+                  <p>5930</p>
+                </div>
+                <div>
+                  <IoExit />
+                  <p>3369</p>
+                </div>
+                <div>
+                  <IoMdPeople />
+                  <p>2435</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="footer_views_info">
+            <p>© 2025 Название библиотеки . Все права защищены.</p>
+            <p>Политика конфидециональнности</p>
+            <div className="footer_views_info_geeks">
+              <a href="https://geeks.kg/geeks-pro">MADE BY GEEKSPRO</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <IoExit />
-          <p>3369</p>
-        </div>
-        <div>
-          <IoMdPeople />
-          <p>2435</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="footer_views_info">
-    <p>© 2025 Название библиотеки . Все права защищены.</p>
-    <p>Политика конфидециональнности</p>
-    <div className="footer_views_info_geeks">
-      <a href="https://geeks.kg/geeks-pro">MADE BY GEEKSPRO</a>
-    </div>
-  </div>
-</div>
 
       </div>
     </footer>

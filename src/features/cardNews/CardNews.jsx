@@ -1,12 +1,63 @@
-import React, { useState, useEffect } from "react";
-import "./cardNews.scss";
+import  { useState, useEffect } from "react";
+import "./CardNews.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper/modules";
+// import { Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 
 const newsItems = [
   {
+    id: 1,
+    date: "20 фев",
+    time: "19:00",
+    title: 'Концерт "Музыкальные ритмы города"',
+    description:
+      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
+    image:
+      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
+  },
+  {
+    id: 1,
+    date: "20 фев",
+    time: "19:00",
+    title: 'Концерт "Музыкальные ритмы города"',
+    description:
+      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
+    image:
+      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
+  },
+  {
+    id: 1,
+    date: "20 фев",
+    time: "19:00",
+    title: 'Концерт "Музыкальные ритмы города"',
+    description:
+      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
+    image:
+      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
+  },
+  {
+    id: 1,
+    date: "20 фев",
+    time: "19:00",
+    title: 'Концерт "Музыкальные ритмы города"',
+    description:
+      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
+    image:
+      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
+  },
+  {
+    id: 1,
+    date: "20 фев",
+    time: "19:00",
+    title: 'Концерт "Музыкальные ритмы города"',
+    description:
+      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
+    image:
+      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
+  },
+  {
+    id: 1,
     date: "20 фев",
     time: "19:00",
     title: 'Концерт "Музыкальные ритмы города"',
@@ -25,51 +76,7 @@ const newsItems = [
       "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
   },
   {
-    date: "20 фев",
-    time: "19:00",
-    title: 'Концерт "Музыкальные ритмы города"',
-    description:
-      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
-    image:
-      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
-  },
-  {
-    date: "20 фев",
-    time: "19:00",
-    title: 'Концерт "Музыкальные ритмы города"',
-    description:
-      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
-    image:
-      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
-  },
-  {
-    date: "20 фев",
-    time: "19:00",
-    title: 'Концерт "Музыкальные ритмы города"',
-    description:
-      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
-    image:
-      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
-  },
-  {
-    date: "20 фев",
-    time: "19:00",
-    title: 'Концерт "Музыкальные ритмы города"',
-    description:
-      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
-    image:
-      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
-  },
-  {
-    date: "20 фев",
-    time: "19:00",
-    title: 'Концерт "Музыкальные ритмы города"',
-    description:
-      "Окунитесь в атмосферу живой музыки с участием популярных исполнителей.",
-    image:
-      "https://falstaff.b-cdn.net/storage/sites/2/2023/09/Bildschirmfoto_2023-09-28_um_16.52.07.png",
-  },
-  {
+    id: 1,
     date: "20 фев",
     time: "19:00",
     title: 'Концерт "Музыкальные ритмы города"',

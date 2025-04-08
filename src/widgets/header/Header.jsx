@@ -1,4 +1,5 @@
 import logo from '../../shared/image/Group.svg';
+import { Link } from 'react-router-dom';
 import "./header.scss"
 import Search from './search/Search';
 import { FaEyeSlash } from "react-icons/fa";
@@ -11,6 +12,7 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 import Burger from './burger/Burger';
 import { useState, useEffect } from 'react';
+import { CiSearch } from "react-icons/ci";
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -36,6 +38,7 @@ export const Header = () => {
     if (active) {
       dispatch(deactivateMode());
       setTimeout(() => mainTextSpeech('Режим для слабовидящих выключен'), 100);
+      document.body.className = "";
     } else {
       dispatch(activeMode());
       setTimeout(() => mainTextSpeech('Режим для слабовидящих включен'), 100);
@@ -43,54 +46,57 @@ export const Header = () => {
   };
 
   return (
-    <div className="">
+    <div className="container">
       {active && <VisuallyImpaired mainTextSpeech={mainTextSpeech} />}
       <div className='header'>
-        <div className="header container">
-          <div className="header_row">
-            <div className="logo">
-              <img src={logo} alt="logo" />
-            </div>
-            {!isMobile ? (
-              <>
-                <div className="tools">
-                  <Search />
-                  <button className='header_eye' onClick={handleVisuallyImpairedToggle}>
-                    <FaEyeSlash color='#105B60' className='eye' />
-                  </button>
-                </div>
-                <HeaderNav className="header_nav-top" start={0} end={5} />
-              </>
-            ) : (
-              <div className="mobile-tools">
-                <div className='lang'>
-
-                <Lang  />
-                </div>
-                <button className='header_eye' onClick={handleVisuallyImpairedToggle}>
-                  <FaEyeSlash color='#105B60' className='eye' />
-                </button>
-                <Search />
-                <Burger />
-              </div>
-            )}
-          </div>
-          {!isMobile && (
-            <div className="header_nav-bottom">
-              <HeaderNav className="header_nav-bottom-links" start={5} end={10} />
-              <div className="header_right">
-                <Lang />
-                <div className='header_icon'>
-                  <div className='locate'><MdOutlineLocationOn /></div>
-                  <div className='locate'><MdOutlinePhone /></div>
-                  <div className='locate'><FaInstagram /></div>
-                  <div className='locate'><FaFacebook /></div>
-                </div>
-              </div>
-            </div>
-          )}
+      <div className="header_row">
+        <div className="logo">
+          <Link to="/"><img src={logo} alt="logo" /></Link>
         </div>
+        {!isMobile ? (
+          <>
+            <div className="tools">
+              <div className="search_desktop">
+                <input type="text" placeholder="Поиск" />
+                <button>
+                  <CiSearch />
+                </button>
+              </div>
+              <button className='header_eye' onClick={handleVisuallyImpairedToggle}>
+                <FaEyeSlash color='#105B60' className='eye' />
+              </button>
+            </div>
+            <HeaderNav className="header_nav-top" start={0} end={5} />
+          </>
+        ) : (
+          <div className="mobile-tools">
+            <div className='lang'>
+
+              <Lang />
+            </div>
+            <button className='header_eye' onClick={handleVisuallyImpairedToggle}>
+              <FaEyeSlash color='#105B60' className='eye' />
+            </button>
+            <Search />
+            <Burger />
+          </div>
+        )}
       </div>
+      {!isMobile && (
+        <div className="header_nav-bottom">
+          <HeaderNav start={5} end={10} />
+          <div className="header_right">
+            <Lang />
+            <div className='header_icon'>
+              <div className='locate'><MdOutlineLocationOn /></div>
+              <div className='locate'><MdOutlinePhone /></div>
+              <div className='locate'><FaInstagram /></div>
+              <div className='locate'><FaFacebook /></div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
+    </div >
   );
 };

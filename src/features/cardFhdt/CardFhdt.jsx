@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./cardFhdt.scss";
+import "./CardFhdt.scss";
 
 export const  CardFhdt = () => {
   const [mobile, setMObile] = useState(window.innerWidth < 460)
@@ -20,15 +20,15 @@ export const  CardFhdt = () => {
       title: "КАТАЛОГИ",
       description:
         "Электронные и печатные каталоги содержат широкий выбор книг, научных изданий и цифровых ресурсов.",
-      imgSrc: "https://natlibraryrm.ru/wp-content/uploads/2020/04/4860331.jpeg",
+      imgSrc: "https://s3-alpha-sig.figma.com/img/2a67/945e/7716749eb276a025f6717346cb1ef647?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JSjKgMnnttqiujshXK9l98-q1l-9biq3YszJjlXznorUzWfOKXlAuv0Ze~rZscvaKIpB7FcqOtElMm8CNf6Hu-Xus0LHUh6skPS-fpC1957Ozgc8O89~CDF9u6gsuBsEh99Juz7uZn1VmV9yRf9DWB7wvScEhjIYvi7qUK4t7~0--dVBDCGQqnX4IyiBl9VXOpi92jGSbv27y4tfBm6m-RAeEPw9iCTw-RB5thnZwY1RqxzrKp9pCOfUViIZhY05guLL3redEi5ydNswVnFCzMS4JXVj-W4rBIvbhXOa7YpNDmOS5WFUneVjIudDzeoW65-MvjyZFYcnJcW1MtfBvg__",
       alt: "Каталоги",
-      link: '/catalogs'
+      link: '/catalog'
     },
     {
       title: "ЭЛЕКТРОННАЯ БИБЛИОТЕКА",
       description:
         "Доступ к тысячам электронных книг, научных публикаций и архивных документов в удобном формате.",
-      imgSrc: "https://natlibraryrm.ru/wp-content/uploads/2020/04/4860331.jpeg",
+      imgSrc: "https://s3-alpha-sig.figma.com/img/2a67/945e/7716749eb276a025f6717346cb1ef647?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JSjKgMnnttqiujshXK9l98-q1l-9biq3YszJjlXznorUzWfOKXlAuv0Ze~rZscvaKIpB7FcqOtElMm8CNf6Hu-Xus0LHUh6skPS-fpC1957Ozgc8O89~CDF9u6gsuBsEh99Juz7uZn1VmV9yRf9DWB7wvScEhjIYvi7qUK4t7~0--dVBDCGQqnX4IyiBl9VXOpi92jGSbv27y4tfBm6m-RAeEPw9iCTw-RB5thnZwY1RqxzrKp9pCOfUViIZhY05guLL3redEi5ydNswVnFCzMS4JXVj-W4rBIvbhXOa7YpNDmOS5WFUneVjIudDzeoW65-MvjyZFYcnJcW1MtfBvg__",
       alt: "Электронная библиотека",
       link: '/electronic'
     },

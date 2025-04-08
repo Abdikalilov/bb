@@ -1,4 +1,5 @@
-import { Banner, Catalog, Graphik, Rating, Video } from "../../widgets";
+import { CardFhdt } from "../../features";
+import { Banner,  Graphik, Rating, Video } from "../../widgets";
 
 
 export const ReaderPage = () => {
@@ -7,7 +8,7 @@ export const ReaderPage = () => {
        <Banner />
        <Graphik />
        <Video />
-       <Catalog />
+      <CardFhdt/> 
        <Rating />
     </div>
   )

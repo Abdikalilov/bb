@@ -30,11 +30,9 @@ export const events = [
 
 ];
 export const AfishaEvents = () => {
-
-
     return (
         <div className="card-afisha">
-            <h1 className="card-afisha__title">АФИША МЕРОПРИЯТИЙ</h1>
+            <h1 className="card-afisha__title main__title">АФИША МЕРОПРИЯТИЙ</h1>
             <div className="card-afisha__list">
                 {events.map((event, index) => (
                     <CardAfisha 

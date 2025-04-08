@@ -7,7 +7,7 @@ export  const Video = () => {
     return (
         <div className='video container'>
 
-            <h1 className='video-text1'>Читательные залы</h1>
+            <h1 className='video-title '>Читательные залы</h1>
 
               
                 <div className='video-player'>

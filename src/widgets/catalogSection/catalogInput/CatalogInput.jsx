@@ -8,6 +8,12 @@ export const CatalogInput = () => {
     const books = [
         { id: 1, author: 'Чынгыз Айтматов', title: 'Эрте келген турналар', description: 'На русском языке', isPopular: true, word: 'турна' },
         { id: 2, author: 'Чынгыз Айтматов', title: 'Материнское поле', description: 'На кыргызском языке', isPopular: false, word: 'толгонай' },
+        { id: 3, author: 'Чынгыз Айтматов', title: 'Прощай, Гульсары', description: 'На русском языке', isPopular: true, word: 'жылкы' },
+        { id: 1, author: 'Чынгыз Айтматов', title: 'Эрте келген турналар', description: 'На русском языке', isPopular: true, word: 'турна' },
+        { id: 2, author: 'Чынгыз Айтматов', title: 'Материнское поле', description: 'На кыргызском языке', isPopular: false, word: 'толгонай' },
+        { id: 3, author: 'Чынгыз Айтматов', title: 'Прощай, Гульсары', description: 'На русском языке', isPopular: true, word: 'жылкы' },
+        { id: 1, author: 'Чынгыз Айтматов', title: 'Эрте келген турналар', description: 'На русском языке', isPopular: true, word: 'турна' },
+        { id: 2, author: 'Чынгыз Айтматов', title: 'Материнское поле', description: 'На кыргызском языке', isPopular: false, word: 'толгонай' },
         { id: 3, author: 'Чынгыз Айтматов', title: 'Прощай, Гульсары', description: 'На русском языке', isPopular: true, word: 'жылкы' }
     ];
 
@@ -18,7 +24,7 @@ export const CatalogInput = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleModal = () => setIsMenuOpen(!isMenuOpen);
-
+ 
     const filteredBooks = books.filter(book => {
         const matchesAuthor = searchAuthor ? book.author.toLowerCase().includes(searchAuthor.toLowerCase()) : true;
         const matchesTitle = searchTitle ? book.title.toLowerCase().includes(searchTitle.toLowerCase()) : true;
@@ -53,7 +59,7 @@ export const CatalogInput = () => {
                             <div className="catalog_controls_input ">
                                 <div className="input1">
                                     <div className="input1_text">
-                                        <input className="input1_text2" type="text" placeholder="Поиск..." value={searchAuthor} onChange={(e) => setSearchAuthor(e.target.value)} /><IoIosSearch className="catalog_icon"/>
+                                        <input className="input1_text2" type="text" placeholder="Поиск..." value={searchAuthor} onChange={(e) => setSearchAuthor(e.target.value)} /><IoIosSearch className="catalog_icon" />
                                     </div>
                                 </div>
                                 {isMenuOpen && <button className="catalog_btn_search" onClick={toggleModal}>искать</button>}
@@ -62,7 +68,7 @@ export const CatalogInput = () => {
 
                                 <div className="input1">
                                     <div className="input1_text">
-                                        <input className="input1_text2" type="text" placeholder="автору..." value={searchTitle} onChange={(e) => setSearchTitle(e.target.value)} /> <IoIosSearch  className="catalog_icon"/>
+                                        <input className="input1_text2" type="text" placeholder="автору..." value={searchTitle} onChange={(e) => setSearchTitle(e.target.value)} /> <IoIosSearch className="catalog_icon" />
                                     </div>
                                 </div>
                                 {isMenuOpen && <button className="catalog_btn_search" onClick={toggleModal}>искать</button>}
