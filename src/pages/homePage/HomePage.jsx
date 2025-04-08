@@ -2,6 +2,7 @@ import { AfishaEvent, HomeBanner, HomeRating, HomeViews } from "../../widgets";
 import { CardPartners,CardFhdt,CardNews } from "../../features/index";
 import { useState, useEffect } from "react";
 
+
 export const HomePage = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 460);
   const [tablet, setTablet] = useState(window.innerWidth <= 1024);

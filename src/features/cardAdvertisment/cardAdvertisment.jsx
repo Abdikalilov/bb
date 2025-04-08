@@ -1,4 +1,4 @@
-import "./CardAdvertisment.scss";
+import "./cardAdvertisment.scss";
 
 export const CardAdvertisment = ({ image, title, date, description }) => {
   return (

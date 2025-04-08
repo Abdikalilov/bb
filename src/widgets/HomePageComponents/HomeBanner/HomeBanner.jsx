@@ -1,6 +1,6 @@
 import image from '../../../shared/homeImages/image.png';
 import vector from '../../../shared/homeImages/vector.png';
-import "./HomeBanner.scss";
+import "./homeBanner.scss";
 
 export function HomeBanner() {
   const banner = {

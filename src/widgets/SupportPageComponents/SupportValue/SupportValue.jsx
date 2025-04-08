@@ -1,4 +1,4 @@
-import './SupportValue.scss';
+import './supportValue.scss';
 import science from '../../../shared/img/science.png';
 import star from '../../../shared/img/star.png';
 

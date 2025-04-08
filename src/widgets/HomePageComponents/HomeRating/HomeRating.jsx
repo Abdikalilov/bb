@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import "./HomeRating.scss";
+import "./homeRating.scss";
 
 const readers = [
   { id: "02", name: "Иван Иванов", books: " (75 книг за месяц).", image: "https://www.pravilamag.ru/upload/img_cache/01e/01e8a856c03c4553a3e7da221f2af2ec_cropped_510x309.webp" },

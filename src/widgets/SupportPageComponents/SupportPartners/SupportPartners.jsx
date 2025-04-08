@@ -1,4 +1,4 @@
-import './SupportPartners.scss';
+import './supportPartners.scss';
 import Sponsors from '../../../shared/img/Sponsors.jpg';
 
 export const SupportPartners = () => {

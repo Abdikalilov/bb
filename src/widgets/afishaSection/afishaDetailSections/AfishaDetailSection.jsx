@@ -4,9 +4,9 @@ import { LuMapPin } from "react-icons/lu";
 import { useParams } from 'react-router-dom';
 import { events } from '../afishaEvents/AfishaEvents';
 import imagee from '../../../shared/eventsImg/imagee.png'
-
-
 import './afishaDetailSection.scss'
+
+
 export const AfishaDetailSection = () => {
     const { id } = useParams();
     const afisha = events.find((item) => item.id === parseInt(id)); 
