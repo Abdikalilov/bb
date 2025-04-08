@@ -1,5 +1,5 @@
-import image from '../../../shared/homeImages/image.png';
-import vector from '../../../shared/homeImages/vector.png';
+// import image from '../../../shared/homeImages/image.png';
+// import vector from '../../../shared/homeImages/vector.png';
 import "./homeBanner.scss";
 
 export const HomeBanner = () => {
