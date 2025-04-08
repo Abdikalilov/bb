@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GoArrowUpRight } from "react-icons/go";
 import './books.scss';
 
-const Books = ({ title, description, id, setVisible, isVisible }) => { 
+export  const Books = ({ title, description, id, setVisible, isVisible }) => { 
     const isOpen = isVisible === id; 
 
     return (
@@ -66,4 +66,3 @@ const Books = ({ title, description, id, setVisible, isVisible }) => {
     );
 }
 
-export default Books;

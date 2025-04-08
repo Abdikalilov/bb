@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./headerNav.scss";
 
-const headerMenu = [
+export const headerMenu = [
     { name: "about", path: "/about" },
     { name: "support", path: "/support" },
     { name: "news", path: "/news" },
@@ -36,4 +36,3 @@ const HeaderNav = ({ className, start = 0, end, onLinkClick }) => {
     );
 };
 
-export default HeaderNav;

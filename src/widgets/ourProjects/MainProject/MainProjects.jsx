@@ -32,7 +32,7 @@ const DataProjects = [
   }
 ]
 
-export default DataProjects;
+
 
 export const MainProjects = () => {
 

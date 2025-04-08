@@ -5,7 +5,7 @@ import { MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 import "./burger.scss";
 import Lang from '../lang/Lang';
 
-const Burger = () => {
+export  const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -61,5 +61,5 @@ const Burger = () => {
   );
 };
 
-export default Burger;
+
 

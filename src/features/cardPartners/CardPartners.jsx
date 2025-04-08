@@ -1,7 +1,7 @@
 import "./cardPartners.scss";
 
 
-export function CardPartners() {
+export const CardPartners = () => {
   const item = [
     {
       id: 1,

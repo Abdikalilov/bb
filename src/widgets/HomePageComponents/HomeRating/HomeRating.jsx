@@ -13,7 +13,7 @@ const books = [
   { id: "03", title: "Книга: История цивилизаций.", author: "Автор: Джон Доу", votes: "Код цивилизаций — 500 прочтений", image: "https://avatars.dzeninfra.ru/get-zen_doc/9852052/pub_64b4f692338eaf5590d9975e_64b4f7546c48c6430dd9352c/scale_1200" },
 ];
 
-export function HomeRating() {
+export const HomeRating = () => {
   const [activePeople, setActivePeople] = useState("01");
   const [activeBooks, setActiveBooks] = useState("01");
 

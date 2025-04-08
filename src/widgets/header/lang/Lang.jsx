@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useState } from 'react';
 import "./lang.scss"
-const Lang = () => {
+export const Lang = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,4 +58,3 @@ const Lang = () => {
   )
 }
 
-export default Lang;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ElectronicSearch.scss';
+import './electronicSearch.scss';
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { IoCloseSharp } from "react-icons/io5";
 import { CardBook } from '../../../features/cardBook/CardBook';

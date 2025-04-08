@@ -1,4 +1,4 @@
-import './ElectronicBanner.scss';
+import './electronicBanner.scss';
 import EllipseA from '../../../shared/img/EllipseA.jpg';
 import EllipseB from '../../../shared/img/EllipseB.jpg';
 import EllipseC from '../../../shared/img/EllipseC.jpg';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import "./homeViews.scss";
 
-export function HomeViews({mobile}) {
+export const HomeViews = ({mobile}) => {
  
 
     const contentData = [
@@ -60,6 +60,6 @@ export function HomeViews({mobile}) {
     );
 }
 
-export default HomeViews;
+
 
 
